@@ -1,24 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
-
+import React from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import {Route, Routes} from "react-router-dom"
+import SideBar from './Pages/LineChart';
+import Layout from './Pages/Layout';
+import LineChart from './Pages/LineChart';
+import Register from './Pages/Register'
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+
+    <>
+    
+    <Routes>
+      <Route path='/' element={<SideBar />}/>
+      <Route path='man' element={<LineChart />}/>
+      
+      <Route path='layout' element={<Layout />}/>
+      <Route path='login' element={<Register />}/>
+    </Routes>
+    </>
+    
   );
 }
 
