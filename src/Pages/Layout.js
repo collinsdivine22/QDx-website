@@ -12,7 +12,7 @@ function Layout() {
       <div className="d-flex">
         {/* Sidebar */}
         <nav className="nav flex-column bg-light p-3" style={{ width: '250px', height: '100vh' }}>
-        <a className="nav-link" href="/"><b>Register</b></a>
+        <a className="nav-link" href="PatientRegistration"><b>Register</b></a>
           <a className="nav-link active" aria-current="page" href="/"><b>Home</b></a>
           <a className="nav-link" href="/"><b>About</b></a>
           <a className="nav-link" href="/"><b>Services</b></a>

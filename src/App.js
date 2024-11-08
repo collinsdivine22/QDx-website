@@ -5,6 +5,7 @@ import SideBar from './Pages/LineChart';
 import Layout from './Pages/Layout';
 import LineChart from './Pages/LineChart';
 import Register from './Pages/Register'
+import PatientRegistration from './Pages/PatientRegistration'
 function App() {
   return (
 
@@ -16,6 +17,7 @@ function App() {
       
       <Route path='layout' element={<Layout />}/>
       <Route path='login' element={<Register />}/>
+      <Route path='PatientRegistration' element={<PatientRegistration />}/>
     </Routes>
     </>
     
