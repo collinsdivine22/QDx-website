@@ -1,4 +1,3 @@
-// Login.js
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -28,7 +27,7 @@ function Login() {
           <p className="text-muted">Login to your account</p>
         </div>
 
-        <form onSubmit={handleLogin}>
+        <form onSubmit={handleLogin} noValidate>
           <div className="form-group mb-3">
             <label htmlFor="email" className="form-label">
               Email Address
@@ -39,8 +38,10 @@ function Login() {
               id="email"
               placeholder="Enter email"
               required
+              aria-label="Email Address"
               style={{ borderRadius: '5px' }}
             />
+            <div className="invalid-feedback">Please enter a valid email address.</div>
           </div>
 
           <div className="form-group mb-3">
@@ -53,8 +54,10 @@ function Login() {
               id="password"
               placeholder="Enter password"
               required
+              aria-label="Password"
               style={{ borderRadius: '5px' }}
             />
+            <div className="invalid-feedback">Password is required.</div>
           </div>
 
           <button
@@ -71,7 +74,7 @@ function Login() {
         </form>
 
         <div className="text-center mt-3">
-          <a href="#" className="text-decoration-none text-primary">
+          <a href="/forgot-password" className="text-decoration-none text-primary">
             Forgot Password?
           </a>
         </div>
